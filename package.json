@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint",
+    "zk-side-menu:build": "ng build zk-side-menu",
+    "zk-side-menu:test": "ng test zk-side-menu --no-watch --no-progress --browsers=ChromeHeadless",
+    "zk-side-menu:lint": "ng lint zk-side-menu",
+    "zk-side-menu:publish": "npm run zk-side-menu:lint && npm run zk-side-menu:test && npm run zk-side-menu:build && npm publish dist/zk-side-menu/"
   },
   "private": true,
   "dependencies": {
@@ -18,20 +23,28 @@
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
+    "@tailwindcss/postcss": "^4.0.13",
+    "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.0.13",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^19.2.1",
     "@angular/cli": "^19.1.6",
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
+    "angular-eslint": "19.2.1",
+    "eslint": "^9.22.0",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.7.2"
+    "ng-packagr": "^19.2.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "8.26.0"
   }
 }

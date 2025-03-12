@@ -1,0 +1,8 @@
+<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<p>Hello again</p>
+<lib-zk-side-menu
+  [isAuthenticated]="isAuthenticated()"
+  [titleColor]="TitleColor.blue"
+  (signIn)="isAuthenticated.set(true)"
+  (signOut)="isAuthenticated.set(false)"
+/>
