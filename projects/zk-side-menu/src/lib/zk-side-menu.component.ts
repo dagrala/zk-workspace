@@ -17,6 +17,9 @@ export enum TitleColor {
 export class ZkSideMenuComponent {
   isAuthenticated = input(false);
 
+  title = input('APX');
+  subTitle = input('Corp');
+
   titleColor = input<TitleColor>(TitleColor.purple);
 
   signOut = output<void>();

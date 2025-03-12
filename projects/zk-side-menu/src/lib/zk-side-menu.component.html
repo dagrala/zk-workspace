@@ -6,8 +6,8 @@
       <h6
         class="text-2xl font-bold block antialiased tracking-normal font-sans leading-relaxed text-white"
       >
-        <span [classList]="[titleColor()]" data-title>APX</span>
-        <span class="font-thin"> Corp</span>
+        <span [classList]="[titleColor()]" data-title>{{ title() }}</span>
+        <span class="font-thin" data-subtitle> {{ subTitle() }}</span>
       </h6>
     </a>
     <button

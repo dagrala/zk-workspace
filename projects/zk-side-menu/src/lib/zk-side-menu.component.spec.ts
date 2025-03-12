@@ -74,4 +74,35 @@ describe('ZkSideMenuComponent', () => {
 
     expect(title.classList).toContain(inputColor);
   });
+
+  it('should show default title and subTitle when title and subTitle are not defined', () => {
+    const title = fixture.nativeElement.querySelector(
+      '[data-title]'
+    ) as HTMLSpanElement;
+    const subTitle = fixture.nativeElement.querySelector(
+      '[data-subtitle]'
+    ) as HTMLSpanElement;
+
+    expect(title.textContent?.trim()).toContain('APX');
+    expect(subTitle.textContent?.trim()).toContain('Corp');
+  });
+
+  it('should show custom title and subTitle when title and subTitle are defined', () => {
+    const titleValue = 'TITLE';
+    const subTitleValue = 'SUBTITLE';
+    fixture.componentRef.setInput('title', titleValue);
+    fixture.componentRef.setInput('subTitle', subTitleValue);
+
+    fixture.detectChanges();
+
+    const title = fixture.nativeElement.querySelector(
+      '[data-title]'
+    ) as HTMLSpanElement;
+    const subTitle = fixture.nativeElement.querySelector(
+      '[data-subtitle]'
+    ) as HTMLSpanElement;
+
+    expect(title.textContent?.trim()).toContain(titleValue);
+    expect(subTitle.textContent?.trim()).toContain(subTitleValue);
+  });
 });
