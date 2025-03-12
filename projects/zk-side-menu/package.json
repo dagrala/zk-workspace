@@ -1,10 +1,16 @@
 {
   "name": "zk-side-menu",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/dagrala/zk-workspace"
   },
-  "version": "0.0.1",
+  "keywords": ["dagrala", "zk", "do-not-use"],
+  "license": "MIT",
+  "author": "DavidG",
+  "bugs": {
+    "url": "https://github.com/dagrala/zk-workspace/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
